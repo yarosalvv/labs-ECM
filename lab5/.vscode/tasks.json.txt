@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build opencv",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I", "C:/Users/Yarcka/opencv/install/include",
+                "-L", "C:/Users/Yarcka/opencv/install/x64/mingw/lib",
+                "-lopencv_core500",
+                "-lopencv_highgui500",
+                "-lopencv_imgproc500",
+                "-lopencv_videoio500",
+                "-lopencv_imgcodecs500"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
